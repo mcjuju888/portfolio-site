@@ -1,7 +1,7 @@
 // simple footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// smooth scroll behavior (modern browsers can also use CSS: html { scroll-behavior: smooth; })
+// smooth scroll
 document.documentElement.style.scrollBehavior = 'smooth';
 
 // Mobile nav toggle
@@ -14,7 +14,6 @@ navToggle?.addEventListener('click', () => {
 // Active link on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
-
 function updateActiveLink() {
   const scrollPos = window.scrollY + window.innerHeight * 0.3;
   sections.forEach((sec) => {
@@ -31,11 +30,10 @@ function updateActiveLink() {
     }
   });
 }
-
 window.addEventListener('scroll', updateActiveLink);
 window.addEventListener('load', updateActiveLink);
 
-// THEMING
+// THEMING (with debug)
 const themeToggle = document.getElementById('theme-toggle');
 const modeLabel = themeToggle?.querySelector('.mode-label');
 
@@ -47,9 +45,10 @@ function applyTheme(theme) {
     document.documentElement.removeAttribute('data-theme');
     if (modeLabel) modeLabel.textContent = '🌙';
   }
+  console.log('[theme] applied:', theme);
 }
 
-// initialize
+// initialization: stored or system
 const stored = localStorage.getItem('theme');
 if (stored) {
   applyTheme(stored);
@@ -58,9 +57,18 @@ if (stored) {
   applyTheme(prefersDark ? 'dark' : 'light');
 }
 
-themeToggle?.addEventListener('click', () => {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  const next = isDark ? 'light' : 'dark';
-  applyTheme(next);
-  localStorage.setItem('theme', next);
-});
+console.log('[theme] current data-theme attribute:', document.documentElement.getAttribute('data-theme'));
+console.log('[theme] stored preference:', stored);
+
+// toggle handler
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('theme', next);
+    console.log('[theme] toggled to:', next);
+  });
+} else {
+  console.warn('Theme toggle button not found');
+}
