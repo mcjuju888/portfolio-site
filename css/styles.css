@@ -270,7 +270,7 @@ body {
   transition: background var(--transition), color var(--transition);
 }
 .card, .nav, .site-footer, .about, .hero {
-  /* you can rely on var(--card) if needed in components */
+ background-color: var(--card);
 }
 .btn {
   background: var(--highlight);
