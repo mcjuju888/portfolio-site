@@ -1,5 +1,5 @@
 // simple footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+//document.getElementById('year').textContent = new Date().getFullYear();
 
 // smooth scroll
 document.documentElement.style.scrollBehavior = 'smooth';
