@@ -1,36 +1,41 @@
 body {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
-  margin:0;
-  padding:0;
-  background:#f0f4f8;
-  color:#1f2937;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background var(--transition), color var(--transition);
 }
+
 .container {
-  max-width:900px;
-  padding:1rem;
-  margin:0 auto;
+  max-width: 900px;
+  padding: 1rem;
+  margin: 0 auto;
 }
+
 header {
-  padding:1rem 0;
-  background:#fff;
-  border-bottom:1px solid #e2e8f0;
+  padding: 1rem 0;
+  background: var(--card);
+  border-bottom: 1px solid #e2e8f0;
 }
+
 nav a {
-  margin-left:1rem;
-  text-decoration:none;
-  color:#374151;
-  font-weight:500;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
 }
+
 #hero {
-  padding:4rem 0;
-  text-align:center;
+  padding: 4rem 0;
+  text-align: center;
 }
+
 footer {
-  padding:2rem 0;
-  text-align:center;
-  font-size:0.85rem;
-  background:#fff;
-  border-top:1px solid #e2e8f0;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  background: var(--card);
+  border-top: 1px solid #e2e8f0;
 }
 
 .hero {
@@ -40,42 +45,50 @@ footer {
   align-items: center;
   padding: 4rem 0;
 }
+
 .hero-content {
   flex: 1 1 320px;
 }
+
 .hero-content h1 {
   font-size: 2.25rem;
   margin: 0 0 0.5rem;
 }
+
 .subtitle {
   font-size: 1.1rem;
   margin: 0.5rem 0 1rem;
   max-width: 600px;
 }
+
 .cta {
   margin: 1rem 0;
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
 }
+
 .micro {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: var(--muted);
   margin-top: 0.75rem;
 }
+
 .hero-image {
   flex: 0 0 200px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .hero-image img {
   width: 180px;
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #6366f1;
+  border: 3px solid var(--highlight);
 }
+
 @media (max-width: 850px) {
   .hero {
     flex-direction: column-reverse;
@@ -85,48 +98,57 @@ footer {
     margin-bottom: 1rem;
   }
 }
+
 .highlight {
-  color: #6366f1;
+  color: var(--highlight);
 }
+
 .btn {
   padding: 0.65rem 1.2rem;
   border-radius: 8px;
-  background: #6366f1;
+  background: var(--highlight);
   color: white;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
 }
+
 .btn.outline {
   background: transparent;
-  border: 2px solid #6366f1;
-  color: #6366f1;
+  border: 2px solid var(--highlight);
+  color: var(--highlight);
 }
 
 .about {
   padding: 4rem 0;
 }
+
 .about-inner {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
   align-items: center;
 }
+
 .about-text {
   flex: 1 1 400px;
 }
+
 .about-text h2 {
   margin-top: 0;
   font-size: 2rem;
 }
+
 .intro {
   font-size: 1.1rem;
   margin: 0.5rem 0 1rem;
 }
+
 .detail {
   margin: 0 0 1rem;
   line-height: 1.5;
 }
+
 .mini-project {
   background: rgba(99, 102, 241, 0.08);
   padding: 1rem 1rem 1.25rem;
@@ -134,23 +156,27 @@ footer {
   border: 1px solid rgba(99, 102, 241, 0.3);
   font-size: 0.9rem;
 }
+
 .mini-project h3 {
   margin: 0 0 0.25rem;
   font-size: 1.1rem;
 }
+
 .about-image {
   flex: 0 0 180px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .about-image img {
   width: 160px;
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #6366f1;
+  border: 2px solid var(--highlight);
 }
+
 @media (max-width: 900px) {
   .about-inner {
     flex-direction: column-reverse;
@@ -175,7 +201,9 @@ footer {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  background: var(--card);
 }
+
 .nav-link {
   position: relative;
   text-decoration: none;
@@ -184,6 +212,7 @@ footer {
   color: var(--text);
   transition: color .2s;
 }
+
 .nav-link::after {
   content: '';
   position: absolute;
@@ -191,15 +220,17 @@ footer {
   left: 0;
   height: 2px;
   width: 0;
-  background: #6366f1;
+  background: var(--highlight);
   transition: width .25s;
 }
+
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
 }
+
 .nav-link.active {
-  color: #6366f1;
+  color: var(--highlight);
 }
 
 /* Hamburger for mobile */
@@ -210,6 +241,7 @@ footer {
   padding: 0;
   cursor: pointer;
 }
+
 .burger-line {
   display: block;
   width: 24px;
@@ -226,7 +258,6 @@ footer {
     position: absolute;
     top: 100%;
     right: 0;
-    background: var(--card);
     flex-direction: column;
     padding: 1rem 1.25rem;
     gap: 0.75rem;
@@ -258,27 +289,27 @@ html {
   --transition: 0.3s ease;
   --highlight: #6366f1;
 }
+
 [data-theme="dark"] {
   --bg: #0f111a;
   --card: #1f2230;
   --text: #e5e7eb;
   --muted: #9ca3af;
 }
-body {
-  background: var(--bg);
-  color: var(--text);
-  transition: background var(--transition), color var(--transition);
+
+.card, .nav, .site-footer, .about, .hero, header, footer {
+  background-color: var(--card);
 }
-.card, .nav, .site-footer, .about, .hero {
- background-color: var(--card);
-}
+
 .btn {
   background: var(--highlight);
 }
+
 .btn.outline {
   border-color: var(--highlight);
   color: var(--highlight);
 }
+
 .theme-toggle {
   background: transparent;
   border: none;
@@ -290,4 +321,31 @@ body {
   align-items: center;
   gap: 4px;
   position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--highlight);
+  transition: width 0.25s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Text color changes on active */
+.nav-link.active {
+  color: var(--highlight);
+}
+
+/* On hover, change color smoothly */
+.nav-link:hover {
+  color: var(--highlight);
+  transition: color 0.25s;
 }
