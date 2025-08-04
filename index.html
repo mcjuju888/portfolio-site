@@ -1,69 +1,82 @@
-<header class="site-header">
-  <div class="container nav-container">
-    <div class="logo">Jai Patel</div>
-    <button id="nav-toggle" aria-label="Toggle navigation" class="nav-burger">
-      <span class="burger-line"></span>
-      <span class="burger-line"></span>
-      <span class="burger-line"></span>
-    </button>
-    <nav class="nav">
-      <a href="#hero" class="nav-link">Home</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </nav>
-    <button id="theme-toggle" aria-label="Toggle theme" class="theme-toggle">
-      <span class="mode-label">🌙</span>
-    </button>
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jai Patel Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
 
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">Jai Patel</div>
+      <button id="nav-toggle" aria-label="Toggle navigation" class="nav-burger">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+      <nav class="nav">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle theme" class="theme-toggle">
+        <span class="mode-label">🌙</span>
+      </button>
+    </div>
+  </header>
 
-<!--Hero section-->
-<section id="hero" class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <h1>Hi, I'm <span class="highlight"> Jai Patel</span></h1>
-      <p class="subtitle">
-        Computer Engineering student building thoughtful web tools and learning full-stack development.  
-        Currently working on projects that help people connect, learn, and plan—like a friend-finder app and algorithm visualizers.
-      </p>
-      <div class="cta">
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="assets/resume.pdf" target="_blank" class="btn outline">Resume</a>
+  <!-- Hero section -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Hi, I'm <span class="highlight">Jai Patel</span></h1>
+        <p class="subtitle">
+          Computer Engineering student building thoughtful web tools and learning full-stack development.  
+          Currently working on projects that help people connect, learn, and plan—like a friend-finder app and algorithm visualizers.
+        </p>
+        <div class="cta">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="assets/resume.pdf" target="_blank" class="btn outline">Resume</a>
+        </div>
+        <p class="micro">Based in Toronto. Always iterating—code, design, and ideas.</p>
       </div>
-      <p class="micro">Based in Toronto. Always iterating—code, design, and ideas.</p>
+      <div class="hero-image">
+        <img src="images/profile.jpg" alt="Photo of Jai Patel" loading="lazy" />
+      </div>
     </div>
-    <div class="hero-image">
-      <img src="images/profile.jpg" alt="Photo of Jai Patel" loading="lazy" />
-    </div>
-  </div>
-</section>
+  </section>
 
-<!--About me-->
-<section id="about" class="about">
-  <div class="container">
-    <div class="about-inner">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p class="intro">
-          I'm a Computer Engineering student based in Toronto, building web tools and learning full-stack development. I care about making practical, user-centered projects—starting with things like a friend-finder app and algorithm visualizations.
-        </p>
-        <p class="detail">
-          Currently sharpening my JavaScript skills while leveraging Python for backend logic. I enjoy tackling problems that help people connect, plan, and learn. This site is my living portfolio: everything here is iterative, and what you see today is version 1.0 of what’s coming next.
-        </p>
-        <div class="mini-project">
-          <h3>🚧 First project in progress</h3>
-          <p>
-            <strong>Friend-Finder App:</strong> A matching tool that uses schedules and interests to help first-year students meet people with similar routines. Planning the schema and prototype—stay tuned.  
-            <em>(You can replace this with a live demo once it's ready.)</em>
+  <!-- About me -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p class="intro">
+            I'm a Computer Engineering student based in Toronto, building web tools and learning full-stack development. I care about making practical, user-centered projects—starting with things like a friend-finder app and algorithm visualizations.
           </p>
+          <p class="detail">
+            Currently sharpening my JavaScript skills while leveraging Python for backend logic. I enjoy tackling problems that help people connect, plan, and learn. This site is my living portfolio: everything here is iterative, and what you see today is version 1.0 of what’s coming next.
+          </p>
+          <div class="mini-project">
+            <h3>🚧 First project in progress</h3>
+            <p>
+              <strong>Friend-Finder App:</strong> A matching tool that uses schedules and interests to help first-year students meet people with similar routines. Planning the schema and prototype—stay tuned.  
+              <em>(You can replace this with a live demo once it's ready.)</em>
+            </p>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="images/profile.jpg" alt="Photo of Jai Patel" loading="lazy" />
         </div>
       </div>
-      <div class="about-image">
-        <img src="images/profile.jpg" alt="Photo of you" loading="lazy" />
-      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
